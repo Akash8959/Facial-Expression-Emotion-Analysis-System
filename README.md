@@ -40,5 +40,5 @@ FER-2013
 The emotion recognition model is built using a Convolutional Neural Network (CNN) architecture. It consists of multiple convolutional layers for feature extraction, pooling layers for dimensionality reduction, and dense layers for emotion classification. The model is trained and evaluated using accuracy and loss metrics.
 
 # Author
-Akash H G
+Akash
 AI & ML Enthusiast
