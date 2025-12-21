@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Dataset</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="form-card">
+      <h1>Upload Dataset (ZIP)</h1>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <form action="{{ url_for('upload_dataset') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="dataset" accept=".zip" required>
+        <button type="submit" class="btn">Predict Emotions</button>
+      </form>
+      <a href="{{ url_for('dashboard') }}" class="btn">Back to Dashboard</a>
+
+      {% if summary %}
+        <div class="result-card">
+          <h2>Dataset Prediction Summary</h2>
+          <ul>
+            {% for emotion, count in summary.items() %}
+              <li>{{ emotion }}: {{ count }}</li>
+            {% endfor %}
+          </ul>
+          <a href="{{ url_for('static', filename=output_folder_relative) }}" class="btn" target="_blank">
+            View Annotated Images
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>
