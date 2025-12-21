@@ -41,4 +41,5 @@ The emotion recognition model is built using a Convolutional Neural Network (CNN
 
 # Author
 Akash
+
 AI & ML Enthusiast
