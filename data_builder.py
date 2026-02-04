@@ -1,3 +1,4 @@
+
 import os
 import cv2
 import dlib
@@ -142,5 +143,6 @@ class ImageToKeyLandmarksDistances(DataBuilder):
 
                         all_kl_dists = utils.get_keylandmarks_distances(key_landmarks_coords)
                         kl_distances.append(all_kl_dists)
+
 
         return np.array(kl_distances)
