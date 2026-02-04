@@ -98,7 +98,7 @@ Face Detection → Image Preprocessing → CNN Model → Emotion Prediction
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/facial-expression-emotion-analysis.git
+git clone https://github.com/Akash8959/facial-expression-emotion-analysis.git
 cd facial-expression-emotion-analysis
 ````
 
