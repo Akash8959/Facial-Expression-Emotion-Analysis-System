@@ -1,11 +1,9 @@
-import numpy as np
 
+import numpy as np
 import scikitplot
 import seaborn as sns
 from matplotlib import pyplot
-
 from sklearn.metrics import classification_report
-
 import tensorflow as tf
 from tensorflow.keras import optimizers
 from tensorflow.keras.models import Model
@@ -503,5 +501,6 @@ class CNN_ROI1_ROI2_KLDIST_Model(BaseModel):
                 epochs = epochs,
                 callbacks = callbacks,
             )
+
 
         self.trained = True
